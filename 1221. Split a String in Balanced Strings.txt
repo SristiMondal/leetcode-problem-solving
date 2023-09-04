@@ -1,0 +1,21 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var balancedStringSplit = function(s) {
+    let LCount=0
+    let RCount=0
+    let result=0
+    for(let i=0;i<s.length;i++){
+        if(s[i]==="L"){
+            LCount+=1
+        }
+        else{
+            RCount+=1
+        }
+        if(LCount===RCount && LCount!==0 && RCount!==0){
+            result+=1
+        }
+    }
+    return result;
+};
